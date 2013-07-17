@@ -1,6 +1,8 @@
 Juicy Slider (Fullscreen jQuery Slideshow)
 ======================================================
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4d633ab006f896928de1e34fbfd22c34 "githalytics.com")](http://githalytics.com/vanting/juicyslider)
+
 Juicy Slider is a responsive slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 browser support, it adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This approach makes it more compatible with older browsers. The current implementation uses jQuery UI to set various transition effects.
 
 ![Screenshot](https://raw.github.com/vanting/juicyslider/master/screenshot.png)
@@ -89,5 +91,4 @@ The images are by [Mark Sebastian](http://www.flickr.com/photos/markjsebastian/)
 ## License
 
 The Juicy Slider is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-
 
