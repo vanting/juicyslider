@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/juicyslider.css" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/juicyslider.js"></script>
+    </head>
+
+    <body>
+        <!-- Juicy Slider -->
+        <div id="juicyslider">
+            <ul>
+                <li><img src="data/1.jpg" alt=""></li>
+                <li><img src="data/2.jpg" alt=""></li>
+                <li><img src="data/3.jpg" alt=""></li>
+                <li><img src="data/4.jpg" alt=""></li>
+                <li><img src="data/5.jpg" alt=""></li>
+            </ul>
+            <div id="next-btn" class="nav">
+                <a href="#" class="next-icon"></a>
+            </div>
+            <div class="mask"></div>
+        </div>
+        
+        <!-- initialize Juicy Slider with a jQuery doc ready -->
+        <script type="text/javascript">
+            // start to run when document ready
+            $(function() {
+                $('#juicyslider').juicyslider({
+                    mask: 'square',
+                    autoplay: 7000,
+                    show: {effect: 'puff', duration: 5000}, 
+                    hide: {effect: 'puff', duration: 3000},
+                });
+            });
+        </script>
+        <!-- end of Juicy Slider -->
+    </body>
+</html>
