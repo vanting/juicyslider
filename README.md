@@ -1,16 +1,15 @@
-Juicy Slider (Fullscreen jQuery Slideshow)
+Juicy Slider
 ======================================================
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4d633ab006f896928de1e34fbfd22c34 "githalytics.com")](http://githalytics.com/vanting/juicyslider)
 
-Juicy Slider is a responsive slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 browser support, it adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This approach makes it more compatible with older browsers. The current implementation uses jQuery UI to set various transition effects.
+Juicy Slider is a responsive slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 browser support, it adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This approach makes it more compatible with older browsers. The current release uses jQuery UI to set its transition effects.
 
 ![Screenshot](https://raw.github.com/vanting/juicyslider/master/screenshot.png)
 
 [Live Demos](http://juicyslider.gopagoda.com/): 
 
 * [default settings](http://juicyslider.gopagoda.com/default_settings.html)
-* [using php image loader](http://juicyslider.gopagoda.com/php_loader.php)
 * [no autoplay](http://juicyslider.gopagoda.com/no_autoplay.html)
 * [drop effect](http://juicyslider.gopagoda.com/drop_effect.html)
 * [puff effect](http://juicyslider.gopagoda.com/puff_effect.html)
@@ -43,9 +42,9 @@ First, include the scripts and style sheet in your header.
         <script type="text/javascript" src="js/juicyslider.js"></script>
     </head>
 
-Now, create a container with ID **juicyslider** to hold your pictures. The **nav** and **mask** DIVs are optional.
+Now, create a container with the class **juicyslider** to hold your pictures. You can assign any ID to the container as you like. The **nav** and **mask** DIVs are for creating navigation button and mask overlay but optional.
 
-	<div id="juicyslider">
+	<div id="myslider" class="juicyslider">
         <ul>
             <li><img src="data/1.jpg" alt=""></li>
             <li><img src="data/2.jpg" alt=""></li>
@@ -53,29 +52,27 @@ Now, create a container with ID **juicyslider** to hold your pictures. The **nav
             <li><img src="data/4.jpg" alt=""></li>
             <li><img src="data/5.jpg" alt=""></li>
         </ul>
-        <div id="next-btn" class="nav">
-            <a href="#" class="next-icon"></a>
-        </div>
+        <div class="nav next"></div>
         <div class="mask"></div>
     </div>
-
-Note, with PHP support, you can just drop your images to the **data/** folder and they will be included by the php script (php_loader.php). Otherwise, manually edit the list of images in the HTML file.
 
 Then initialize the plugin like this:
 
 
-    $('#juicyslider').juicyslider();
+    $('#myslider').juicyslider();
 
 or
 
-	$('#juicyslider').juicyslider({
+	$('#myslider').juicyslider({
     	// these are the defaults
-    	mode: "cover", 								// or "contain"
-    	mask: "raster", 							// or "square", "strip", "none"
+    	mode: "cover", 								// "cover" or "contain"
+		width: '100%',      						// set null to make the slider as wide/tall as the window,
+        height: '100%',     						// otherwise set any other values in px or % unit
+    	mask: "raster", 							// "raster", "square", "strip" or "none"
      	bgcolor: "#000",
-     	autoplay: 3000, 							// 0 for no autoplay, any other postive number for play interval in (ms)
-     	show: {effect: 'fade', duration: 1000}, 	// effect params refer to jQuery UI
-    	hide: {effect: 'fade', duration: 1000},		// try 'puff' or 'drop' for the effect arg
+     	autoplay: 4000, 							// 0 for no autoplay, any other postive number for play interval in (ms)
+     	show: {effect: 'fade', duration: 1500}, 	// effect params refer to jQuery UI
+    	hide: {effect: 'fade', duration: 1500},		// try 'puff' or 'drop' for the effect arg
     });
 
 Here you go!

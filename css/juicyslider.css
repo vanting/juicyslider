@@ -1,37 +1,25 @@
 /**
  * Juicy Slider styles sheet
  *
- * Version: v1.0.0
  * (c) 2013 by Van Ting
  *
  */
 
 /* CSS reset */
-html {
+html, body {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
-div, span, object, iframe, p,
-pre, a, abbr, acronym, address,
-code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend,
-caption, tbody, tfoot, thead, tr {
-    margin: 0;
-    padding: 0;
+.juicyslider {
+    position: relative;
+    padding:0;
+    margin:0;
     border: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    font-family: inherit;
-    vertical-align: baseline;
 }
-/* end of CSS reset */
 
-#juicyslider ul {
+.juicyslider ul {
     width:100%;
     height:100%;
     position:absolute;
@@ -41,7 +29,7 @@ caption, tbody, tfoot, thead, tr {
     margin:0;
 }
 
-#juicyslider li {
+.juicyslider li {
     width: 100%;
     height:100%;
     position: absolute;
@@ -50,8 +38,40 @@ caption, tbody, tfoot, thead, tr {
     display:none;       /* all hidden initially */
 }
 
-#juicyslider li:first-child {
+.juicyslider li:first-child {
     display: block;
+}
+
+.juicyslider .nav {
+    position: absolute;
+    top: 45%;
+    padding: 20px;
+    opacity: .1;
+    filter: alpha(opacity=10);
+    cursor: pointer;
+    z-index: 1000;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.juicyslider:hover .nav {
+    opacity: .5;
+    filter: alpha(opacity=50); 
+}
+
+.next {
+    right: 3%;
+    background-image: url(../img/next-40.png);
+}
+
+.mask {
+    background-image: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }
 
 .maxw {
@@ -66,64 +86,4 @@ caption, tbody, tfoot, thead, tr {
     height: 100%;
     position: absolute;
     filter:inherit;     /* for ie8 to inherit parent opacity */
-}
-
-body {
-    background-color: #000;
-}
-
-/*
-.next-icon {
-    display: block;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: -5px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav {
-    position: absolute;
-    right: 5%;
-    top: 45%;
-    padding: 20px;
-    background: #000;
-    border-radius: 40px;
-    opacity: .4;
-    cursor: pointer;
-    z-index: 1000;
-}
-*/
-
-.nav {
-    background-image: url(../img/next-60.png);
-    position: absolute;
-    right: 3%;
-    top: 45%;
-    padding: 30px;
-    opacity: .15;
-    filter: alpha(opacity=15);
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.nav:hover {
-    opacity: .5;
-    filter: alpha(opacity=50); 
-}
-
-.mask {
-    background-image: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
 }

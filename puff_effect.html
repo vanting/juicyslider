@@ -9,7 +9,7 @@
 
     <body>
         <!-- Juicy Slider -->
-        <div id="juicyslider">
+        <div id="myslider" class="juicyslider">
             <ul>
                 <li><img src="data/1.jpg" alt=""></li>
                 <li><img src="data/2.jpg" alt=""></li>
@@ -17,21 +17,21 @@
                 <li><img src="data/4.jpg" alt=""></li>
                 <li><img src="data/5.jpg" alt=""></li>
             </ul>
-            <div id="next-btn" class="nav">
-                <a href="#" class="next-icon"></a>
-            </div>
+            <div class="nav next"></div>
             <div class="mask"></div>
         </div>
-        
+
         <!-- initialize Juicy Slider with a jQuery doc ready -->
         <script type="text/javascript">
             // start to run when document ready
             $(function() {
-                $('#juicyslider').juicyslider({
+                $('#myslider').juicyslider({
                     mask: 'square',
                     autoplay: 7000,
-                    show: {effect: 'puff', duration: 5000}, 
+                    show: {effect: 'puff', duration: 5000},
                     hide: {effect: 'puff', duration: 3000},
+                    width: null,
+                    height: null,
                 });
             });
         </script>
