@@ -5,8 +5,9 @@
  *
  */
 
-/* CSS reset */
+
 html, body {
+    /* CSS reset */
     margin: 0;
     padding: 0;
     border: 0;
@@ -61,12 +62,12 @@ html, body {
     filter: alpha(opacity=50); 
 }
 
-.next {
+.juicyslider .nav.next {
     right: 3%;
     background-image: url(../img/next-40.png);
 }
 
-.mask {
+.juicyslider .mask {
     background-image: none;
     position: absolute;
     width: 100%;
@@ -74,14 +75,14 @@ html, body {
     z-index: 100;
 }
 
-.maxw {
+.juicyslider img.maxw {
     width: 100%;
     height: auto;
     position: absolute;
     filter:inherit;     /* for ie8 to inherit parent opacity */
 }
 
-.maxh {
+.juicyslider img.maxh {
     width: auto;
     height: 100%;
     position: absolute;

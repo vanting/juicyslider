@@ -13,14 +13,14 @@
 
         var settings = $.extend({
             // these are the defaults.
-            mode: "cover", // or "contain"
+            mode: "cover",      // "cover" or "contain"
             width: '100%',      // set null to make the slider as wide/tall as the window,
-            height: '100%',     // or any other values in px or % unit
-            mask: "raster", // or "square", "strip", "none"
+            height: '100%',     // otherwise set any other values in px or % unit
+            mask: "raster",     // "raster", "square", "strip" or "none"
             bgcolor: "#000",
             autoplay: 4000, // 0 for no autoplay, any other postive number for play interval in (ms)
-            show: {effect: 'fade', duration: 1500}, // effect params refer to jQuery UI
-            hide: {effect: 'fade', duration: 1500},
+            show: {effect: 'fade', duration: 1500},    // effect params refer to jQuery UI
+            hide: {effect: 'fade', duration: 1500},     // try 'puff' or 'drop' for the effect arg
         }, options);
 
         // set bg color
