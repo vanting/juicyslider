@@ -47,8 +47,8 @@ html, body {
     position: absolute;
     top: 45%;
     padding: 20px;
-    opacity: .1;
-    filter: alpha(opacity=10);
+    opacity: 0;
+    filter: alpha(opacity=0);
     cursor: pointer;
     z-index: 1000;
     -webkit-transition: all 200ms ease-in-out;
@@ -78,12 +78,14 @@ html, body {
 .juicyslider img.maxw {
     width: 100%;
     height: auto;
+    max-height: none;
     position: absolute;
     filter:inherit;     /* for ie8 to inherit parent opacity */
 }
 
 .juicyslider img.maxh {
     width: auto;
+    max-width: none;
     height: 100%;
     position: absolute;
     filter:inherit;     /* for ie8 to inherit parent opacity */

@@ -11,29 +11,22 @@
 
     $.fn.juicyslider = function(options) {
 
-        var settings = $.extend({
+        var 
+        settings = $.extend({
             // these are the defaults.
-            mode: "cover",      // "cover" or "contain"
-            width: '100%',      // set null to make the slider as wide/tall as the window,
-            height: '100%',     // otherwise set any other values in px or % unit
-            mask: "raster",     // "raster", "square", "strip" or "none"
+            mode: "cover", // "cover" or "contain"
+            width: '100%', // set null to make the slider as wide/tall as the window,
+            height: '100%', // otherwise set any other values in px or % unit
+            mask: "raster", // "raster", "square", "strip" or "none"
             bgcolor: "#000",
             autoplay: 4000, // 0 for no autoplay, any other postive number for play interval in (ms)
-            show: {effect: 'fade', duration: 1500},    // effect params refer to jQuery UI
-            hide: {effect: 'fade', duration: 1500},     // try 'puff' or 'drop' for the effect arg
-        }, options);
-
-        // set bg color
-        this.css('background-color', settings.bgcolor);
-
-        // set mask
-        this.find('.mask').css('background-image', settings.mask == 'none' ? 'none' : 'url(./img/' + settings.mask + '.png)');
-
-        var slides = this.find('li');
-        var amount = slides.length;
-        var i = 0;
-
-        var nextSlide = function(event) {
+            show: {effect: 'fade', duration: 1500}, // effect params refer to jQuery UI
+            hide: {effect: 'fade', duration: 1500}, // try 'puff' or 'drop' for the effect arg
+        }, options),               
+        slides = this.find('li'),
+        amount = slides.length,
+        i = 0,
+        nextSlide = function(event) {
             if (event)
                 event.preventDefault();
 
@@ -44,7 +37,15 @@
             resizeImg();
             $(slides[i]).css({display: 'none'});
             $(slides[i]).show(settings.show);
-        }
+        },
+        theWindow = $(window),
+        viewport = this;
+
+        // set bg color
+        this.css('background-color', settings.bgcolor);
+
+        // set mask
+        this.find('.mask').css('background-image', settings.mask == 'none' ? 'none' : 'url(./img/' + settings.mask + '.png)');
 
         // set the next button
         this.find('.nav.next').click(nextSlide);
@@ -56,9 +57,6 @@
         /*
          * handling bg images resize
          */
-        var theWindow = $(window);
-        var viewport = this;
-
         function resizeImg() {
 
             // set width and height of the slider
