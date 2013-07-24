@@ -42,7 +42,7 @@ First, include the scripts and style sheet in your header.
         <script type="text/javascript" src="js/juicyslider.js"></script>
     </head>
 
-Now, create a container with the class **juicyslider** to hold your pictures. You can assign any ID to the container as you like. The **nav** and **mask** DIVs are for creating navigation button and mask overlay but optional.
+Now, create a container with the class **juicyslider** to hold your pictures. You can assign any ID to the container as you like. The **nav** and **mask** DIVs are for creating navigation buttons and mask overlay but optional.
 
 	<div id="myslider" class="juicyslider">
         <ul>
@@ -53,6 +53,7 @@ Now, create a container with the class **juicyslider** to hold your pictures. Yo
             <li><img src="data/5.jpg" alt=""></li>
         </ul>
         <div class="nav next"></div>
+		<div class="nav prev"></div>
         <div class="mask"></div>
     </div>
 
@@ -71,6 +72,7 @@ or
     	mask: "raster", 							// "raster", "square", "strip" or "none"
      	bgcolor: "#000",
      	autoplay: 4000, 							// 0 for no autoplay, any other postive number for play interval in (ms)
+		shuffle: false, 							// set true to shuffle the picture order
      	show: {effect: 'fade', duration: 1500}, 	// effect params refer to jQuery UI
     	hide: {effect: 'fade', duration: 1500},		// try 'puff' or 'drop' for the effect arg
     });

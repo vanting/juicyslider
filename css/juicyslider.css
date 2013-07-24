@@ -55,6 +55,7 @@ html, body {
     -moz-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
+    background-image: url(../img/nav-40.png);
 }
 
 .juicyslider:hover .nav {
@@ -64,7 +65,11 @@ html, body {
 
 .juicyslider .nav.next {
     right: 3%;
-    background-image: url(../img/next-40.png);
+}
+
+.juicyslider .nav.prev {
+    left: 3%;
+    background-position: 40px 0;
 }
 
 .juicyslider .mask {

@@ -20,23 +20,29 @@
             mask: "raster", // "raster", "square", "strip" or "none"
             bgcolor: "#000",
             autoplay: 4000, // 0 for no autoplay, any other postive number for play interval in (ms)
+            shuffle: false, // set true to shuffle the picture order
             show: {effect: 'fade', duration: 1500}, // effect params refer to jQuery UI
             hide: {effect: 'fade', duration: 1500}, // try 'puff' or 'drop' for the effect arg
         }, options),               
         slides = this.find('li'),
         amount = slides.length,
-        i = 0,
-        nextSlide = function(event) {
-            if (event)
+        current = 0,
+        turnSlide = function(event) {
+            var step = 1;
+            if (event) {
                 event.preventDefault();
-
-            $(slides[i]).hide(settings.hide);
-            i = (i < amount - 1) ? i + 1 : 0;
+                step = event.data.step;
+            }
+            if (settings.shuffle) 
+                step = Math.floor(Math.random()*(amount - 1) + 1);
+            
+            $(slides[current]).hide(settings.hide);
+            current = (((current + step) % amount) + amount) % amount;
             // must make displayable before detecting the dimension
-            $(slides[i]).css({display: 'block'});
+            $(slides[current]).css({display: 'block'});
             resizeImg();
-            $(slides[i]).css({display: 'none'});
-            $(slides[i]).show(settings.show);
+            $(slides[current]).css({display: 'none'});
+            $(slides[current]).show(settings.show);
         },
         theWindow = $(window),
         viewport = this;
@@ -48,11 +54,12 @@
         this.find('.mask').css('background-image', settings.mask == 'none' ? 'none' : 'url(./img/' + settings.mask + '.png)');
 
         // set the next button
-        this.find('.nav.next').click(nextSlide);
+        this.find('.nav.next').click({step:1}, turnSlide);
+        this.find('.nav.prev').click({step:-1}, turnSlide);
 
         // set autoplay interval 
         if (settings.autoplay > 0)
-            setInterval(nextSlide, settings.autoplay);
+            setInterval(turnSlide, settings.autoplay);
 
         /*
          * handling bg images resize
@@ -66,7 +73,7 @@
             viewh = viewport.height();
             viewRatio = vieww / viewh;
 
-            bgimg = $(slides[i]).find("img");      // the current visible image
+            bgimg = $(slides[current]).find("img");      // the current visible image
 
             var doResize = function() {
 
