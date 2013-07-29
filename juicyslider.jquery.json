@@ -27,7 +27,6 @@
     "homepage": "https://github.com/vanting/juicyslider",
     "docs": "https://github.com/vanting/juicyslider",
     "demo" : "http://juicyslider.gopagoda.com/",
-    "download": "https://github.com/vanting/juicyslider/releases",
     "dependencies": {
         "jquery": ">=1.7",
         "ui.core": ">=1.9"
