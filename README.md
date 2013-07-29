@@ -3,7 +3,15 @@ Juicy Slider
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4d633ab006f896928de1e34fbfd22c34 "githalytics.com")](http://githalytics.com/vanting/juicyslider)
 
-Juicy Slider is a responsive slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 browser support, it adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This approach makes it more compatible with older browsers. The current release uses jQuery UI to set its transition effects.
+Juicy Slider is a responsive slider/slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 support of browser, this plugin adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This makes it compatible with older browsers and more consistent. The current release uses jQuery UI to set its transition effects.
+
+## Features
+
+* Lightweight - the minified script is less than 2KB
+* Robust - compatible with almost all browsers
+* Customizable - various effects, masks and options to create your own style
+* Responsive - respond to the change of viewport size
+* Open - it is open source and free!
 
 ![Screenshot](https://raw.github.com/vanting/juicyslider/master/screenshot.png)
 

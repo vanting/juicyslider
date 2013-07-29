@@ -1,0 +1,35 @@
+{
+    "name": "juicyslider",
+    "title": "Juicy Slider",
+    "description": "Juicy Slider is a responsive slider/slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 support of browser, this plugin adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This makes it compatible with older browsers and more consistent. The current release uses jQuery UI to set its transition effects.",
+    "keywords": [
+        "slider",
+        "slideshow",
+        "effect",
+        "fullscreen",
+        "responsive",
+        "customizable",
+        "lightweight",
+        "compatible"
+    ],
+    "version": "1.1.0",
+    "author": {
+        "name": "Van Ting",
+        "url": "https://github.com/vanting"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "bugs": "https://github.com/vanting/juicyslider/issues",
+    "homepage": "https://github.com/vanting/juicyslider",
+    "docs": "https://github.com/vanting/juicyslider",
+    "demo" : "http://juicyslider.gopagoda.com/",
+    "download": "https://github.com/vanting/juicyslider/releases",
+    "dependencies": {
+        "jquery": ">=1.7",
+        "ui.core": ">=1.9"
+    }
+}
