@@ -1,8 +1,6 @@
 Juicy Slider
 ======================================================
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4d633ab006f896928de1e34fbfd22c34 "githalytics.com")](http://githalytics.com/vanting/juicyslider)
-
 Juicy Slider is a responsive slider/slideshow plugin for jQuery. Unlike other plugins that rely on CSS3 support of browser, this plugin adjusts image size by computing the corresponding aspect ratio of images and viewport using javascript. This makes it compatible with older browsers and more consistent. The current release uses jQuery UI to set its transition effects.
 
 ## Features
@@ -15,13 +13,13 @@ Juicy Slider is a responsive slider/slideshow plugin for jQuery. Unlike other pl
 
 ![Screenshot](https://raw.github.com/vanting/juicyslider/master/screenshot.png)
 
-[Live Demos](http://juicyslider.gopagoda.com/): 
+[Live Demos](http://redslim.ga/juicyslider/): 
 
-* [default settings](http://juicyslider.gopagoda.com/default_settings.html)
-* [no autoplay](http://juicyslider.gopagoda.com/no_autoplay.html)
-* [drop effect](http://juicyslider.gopagoda.com/drop_effect.html)
-* [puff effect](http://juicyslider.gopagoda.com/puff_effect.html)
-* [contain mode](http://juicyslider.gopagoda.com/contain_mode.html)
+* [default settings](http://redslim.ga/juicyslider/default_settings.html)
+* [no autoplay](http://redslim.ga/juicyslider/no_autoplay.html)
+* [drop effect](http://redslim.ga/juicyslider/drop_effect.html)
+* [puff effect](http://redslim.ga/juicyslider/puff_effect.html)
+* [contain mode](http://redslim.ga/juicyslider/contain_mode.html)
 
 ## Requirement
 
@@ -87,7 +85,7 @@ or
 
 Here you go!
 
-For more details, please check out the live [demos](http://juicyslider.gopagoda.com/).
+For more details, please check out the live [demos](http://redslim.ga/juicyslider/).
 
 
 ## Credits
