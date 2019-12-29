@@ -19,7 +19,7 @@ Juicy Slider is a responsive slider/slideshow plugin for jQuery. Unlike other pl
 * [no autoplay](http://vanting.github.io/juicyslider/no_autoplay.html)
 * [drop effect](http://vanting.github.io/juicyslider/drop_effect.html)
 * [puff effect](http://vanting.github.io/juicyslider/puff_effect.html)
-* [contain mode](http://rvanting.github.io/juicyslider/contain_mode.html)
+* [contain mode](http://vanting.github.io/juicyslider/contain_mode.html)
 
 ## Requirement
 
